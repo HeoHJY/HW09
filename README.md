@@ -33,10 +33,10 @@
 
 **해결 방법:**
 ```cpp
-// 기존 코드 (문제 상황)
+//기존 코드 (문제 상황)
 SetChatMessageString(NotificationString);
 
-// 수정된 코드
+//수정된 코드
 ClientRPCPrintChatMessageString(NotificationString);
 ```
 `ClientRPCPrintChatMessageString()`을 직접 호출하여 접속 알림만 출력되도록 수정
@@ -52,7 +52,7 @@ ClientRPCPrintChatMessageString(NotificationString);
 
 **해결 방법:**
 ```cpp
-// GameModeBase에서 직접 최신 플레이어 정보 조합
+//GameModeBase에서 직접 최신 플레이어 정보 조합
 FString PlayerInfo = NBPC->GetPlayerState()->GetPlayerInfoString();
 FString CombinedMessageString = PlayerInfo + TEXT(": ") + InChatMessageString + TEXT(" -> ") + JudgeResultString;
 ```
